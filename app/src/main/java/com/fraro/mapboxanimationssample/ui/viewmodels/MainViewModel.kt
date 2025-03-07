@@ -83,7 +83,6 @@ class StreamReader(context: Context) {
         csvReader().openAsync(inputStream) {
             try {
                 readAllAsSequence().asFlow().collect {
-                readAllAsSequence().asFlow().collect {
                     val delay = 600L
                     delay(delay)
                     emit(it)
