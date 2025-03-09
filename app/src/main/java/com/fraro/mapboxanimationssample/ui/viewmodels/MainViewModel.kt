@@ -121,7 +121,6 @@ class StreamProducer(
 
     fun stopStream() {
         val animationState = StateHolder(
-            id = 1,
             state = State.Stop,
             animationType = AnimationType.OFFSET
         )
@@ -176,7 +175,6 @@ class MapProjector() {
         if (isStart) {
 
             val rotationStateHolder = StateHolder<Float, AnimationVector1D>(
-                id = 1,
                 state = Start(
                     visualDescriptor = VisualDescriptor(
                         currentValue = heading,
@@ -198,7 +196,6 @@ class MapProjector() {
             )
 
             return StateHolder<Offset, AnimationVector2D>(
-                id = 1,
                 state = Start(
                     visualDescriptor = VisualDescriptor(
                         currentValue = offset,
@@ -221,7 +218,6 @@ class MapProjector() {
         else {
 
             val rotationStateHolder = StateHolder<Float, AnimationVector>(
-                id = 1,
                 state = State.Animated(
                     animation = Animation(
                         animationSpec = tween(
@@ -236,7 +232,6 @@ class MapProjector() {
             )
 
             return StateHolder<Offset, AnimationVector>(
-                id = 1,
                 state = State.Animated(
                     animation = Animation(
                         animationSpec = tween(
